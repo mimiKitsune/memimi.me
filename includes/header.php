@@ -31,6 +31,7 @@
                         <li><a href="/minecraft/creative/">Creative</a></li>
                     </ul>
                 </li>
+                <li><a href="https://github.com/mimiKitsune">GitHub</a></li>
             </ul>
         </nav>
     </header>
