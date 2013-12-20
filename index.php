@@ -5,7 +5,7 @@
  * Date: 20/12/13
  * Time: 00:55
  */
-include 'includes/header.php';
+
 
 //print_r(explode('/', $_SERVER['REQUEST_URI']));
 $url = array_values(array_filter(explode('/', $_SERVER['REQUEST_URI'])));
@@ -25,11 +25,20 @@ function parse($urlPart, $location) {
         return parse($urlPart, $location.$part.'/');
     }
     else {
-        return '404.php';
+        return throw404();
     }
 
 }
 
-include parse($url, 'pages/');
+function throw404() {
+    header("HTTP/1.0 404 Not Found");
+    return '404.php';
+}
+
+$page = parse($url, 'pages/');
+
+include 'includes/header.php';
+
+include $page;
 
 include 'includes/footer.php';
