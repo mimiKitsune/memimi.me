@@ -1,0 +1,23 @@
+.flake {
+  position: absolute;
+  top: -64px;
+  opacity: 1;
+  transition: all 10s linear;
+}
+.snowflake#snowTemplate {
+  display: none;
+}
+body.snowBackground {
+    background: #060614; /* Old browsers */
+    background: -moz-linear-gradient(top,  #060614 0%, #060646 87%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#060614), color-stop(87%,#060646), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #060614 0%,#060646 87%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #060614 0%,#060646 87%,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #060614 0%,#060646 87%,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #060614 0%,#060646 87%,#ffffff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#060614', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+    overflow: hidden;
+}
+div.snowBackground {
+    background: #fff;
+}

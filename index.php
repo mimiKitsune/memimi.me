@@ -17,7 +17,6 @@ function parse($urlPart, $location) {
         return $location.'home.php';
     }
     elseif (count($urlPart) === 1 && is_file($location.$urlPart[0].'.php')) {
-        //print_r($location);
         return $location.$urlPart[0].'.php';
     }
     elseif (is_dir($location.$urlPart[0]) && count($urlPart) > 1) {
@@ -25,20 +24,12 @@ function parse($urlPart, $location) {
         return parse($urlPart, $location.$part.'/');
     }
     else {
-        return throw404();
+        return '404.php';
     }
 
 }
 
-function throw404() {
-    header("HTTP/1.0 404 Not Found");
-    return '404.php';
-}
 
 $page = parse($url, 'pages/');
 
-include 'includes/header.php';
-
 include $page;
-
-include 'includes/footer.php';
